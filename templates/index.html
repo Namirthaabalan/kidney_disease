@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Logistic Regression Prediction</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Enter Values for CKD Prediction</h1>
+        <form action="/predict" method="POST">
+            <label for="age">Age (yrs):</label>
+            <input type="number" step="any" name="age" required><br>
+
+            <label for="blood_pressure">Blood Pressure (mm/Hg):</label>
+            <input type="number" step="any" name="blood_pressure" required><br>
+
+            <label for="specific_gravity">Specific Gravity:</label>
+            <input type="number" step="any" name="specific_gravity" required><br>
+
+            <label for="albumin">Albumin:</label>
+            <input type="number" step="any" name="albumin" required><br>
+
+            <label for="sugar">Sugar:</label>
+            <input type="number" step="any" name="sugar" required><br>
+
+            <label for="blood_glucose_random">Blood Glucose Random (mgs/dL):</label>
+            <input type="number" step="any" name="blood_glucose_random" required><br>
+
+            <label for="blood_urea">Blood Urea (mgs/dL):</label>
+            <input type="number" step="any" name="blood_urea" required><br>
+
+            <label for="serum_creatinine">Serum Creatinine (mgs/dL):</label>
+            <input type="number" step="any" name="serum_creatinine" required><br>
+
+            <label for="sodium">Sodium (mEq/L):</label>
+            <input type="number" step="any" name="sodium" required><br>
+
+            <label for="potassium">Potassium (mEq/L):</label>
+            <input type="number" step="any" name="potassium" required><br>
+
+            <label for="hemoglobin">Hemoglobin (gms):</label>
+            <input type="number" step="any" name="hemoglobin" required><br>
+
+            <label for="packed_cell_volume">Packed Cell Volume:</label>
+            <input type="number" step="any" name="packed_cell_volume" required><br>
+
+            <label for="white_blood_cells">White Blood Cells (cells/cmm):</label>
+            <input type="number" step="any" name="white_blood_cells" required><br>
+
+            <label for="red_blood_cells">Red Blood Cells (millions/cmm):</label>
+            <input type="number" step="any" name="red_blood_cells" required><br>
+
+            <label for="red_blood_cells_normal">Red Blood Cells: normal (1 for yes, 0 for no):</label>
+            <input type="number" name="red_blood_cells_normal" required><br>
+
+            <label for="pus_cells_normal">Pus Cells: normal (1 for yes, 0 for no):</label>
+            <input type="number" name="pus_cells_normal" required><br>
+
+            <label for="pus_cell_clumps_present">Pus Cell Clumps: present (1 for yes, 0 for no):</label>
+            <input type="number" name="pus_cell_clumps_present" required><br>
+
+            <label for="bacteria_present">Bacteria: present (1 for yes, 0 for no):</label>
+            <input type="number" name="bacteria_present" required><br>
+
+            <label for="hypertension">Hypertension: yes (1 for yes, 0 for no):</label>
+            <input type="number" name="hypertension" required><br>
+
+            <label for="diabetes_mellitus">Diabetes Mellitus: yes (1 for yes, 0 for no):</label>
+            <input type="number" name="diabetes_mellitus" required><br>
+
+            <label for="coronary_artery_disease">Coronary Artery Disease: yes (1 for yes, 0 for no):</label>
+            <input type="number" name="coronary_artery_disease" required><br>
+
+            <label for="appetite_poor">Appetite: poor (1 for yes, 0 for no):</label>
+            <input type="number" name="appetite_poor" required><br>
+
+            <label for="pedal_edema">Pedal Edema: yes (1 for yes, 0 for no):</label>
+            <input type="number" name="pedal_edema" required><br>
+
+            <label for="anemia">Anemia: yes (1 for yes, 0 for no):</label>
+            <input type="number" name="anemia" required><br>
+
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
