@@ -9,7 +9,7 @@ app = Flask(__name__)
 # Load and train the model with your dataset
 def train_model():
     # Load your dataset (adjust path as necessary)
-    file_path = 'D:/BDA MICRO PROJECT_NEW/c1.csv'
+    file_path = 'c1.csv'
     data = pd.read_csv(file_path)
 
     # Fill missing values (if any)
